@@ -28,7 +28,7 @@ print('Reading data...')
 df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
 
 print('Processing data...')
-df = helpers.add_codons_to_df(df, 'mRNA_adjusted')
+df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
 df['sentiment'] = np.where(df['abundance'] > np.median(df['abundance'].values), 1, 0)
 #print('{:.2f}% have high abundance'.format(df['sentiment'].mean()*100))
 
@@ -69,13 +69,13 @@ model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=10, verbos
 
 grid = BayesSearchCV(
     estimator=model,
-    param_grid=param_grid,
+    search_spaces=param_grid,
     cv=StratifiedKFold(n_splits=3, shuffle=True),
     verbose=True,
     scoring='roc_auc',
 )
 
-result = grid.fit(X_train_seq, y_train, callbacks=VerboseCallback(1))
+result = grid.fit(X_train_seq, y_train)
 print('Best params: ', grid.best_params_)
 params = grid.best_params_
 
