@@ -56,36 +56,39 @@ X_train_seq = pad_sequences(X_train_seq, MAX)
 X_test_seq = pad_sequences(X_test_seq, MAX)
 X_full_seq = pad_sequences(X_full_seq, MAX)
 
-print('Building Model...')
-param_grid = {
-    'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
-    'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
-    'lstm_units' : Integer(1, 10),
-    'neurons_dense' : Integer(1, 300),
-    'embedding_size' : Integer(2, 500)
-}
+#print('Building Model...')
+#param_grid = {
+#    'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
+#    'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
+#    'lstm_units' : Integer(1, 10),
+#    'neurons_dense' : Integer(1, 300),
+#    'embedding_size' : Integer(2, 500)
+#}
 
-model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
+#model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
 
-grid = BayesSearchCV(
-    estimator=model,
-    search_spaces=param_grid,
-    cv=StratifiedKFold(n_splits=3, shuffle=True),
-    verbose=True,
-    scoring='roc_auc',
-)
+#grid = BayesSearchCV(
+#    estimator=model,
+#    search_spaces=param_grid,
+#    cv=StratifiedKFold(n_splits=3, shuffle=True),
+#    verbose=True,
+#    scoring='roc_auc',
+#)
 
-result = grid.fit(X_train_seq, y_train)
-print('Best params: ', grid.best_params_)
-params = grid.best_params_
+#result = grid.fit(X_train_seq, y_train)
+best_params = dict([('dropout_rate', 0.1), ('embedding_size', 2), ('learning_rate', 0.0008407494835791036), ('lstm_units', 10), ('neurons_dense', 300)])
+print('Best params: ', best_params)
+params = best_params
 
 print('Print predicting with best params...')
 best_model = sentiment_model.create_model(**params)
+best_model.fit(X_train_seq, y_train)
 y_pred = best_model.predict(X_test_seq)
+y_pred_binary = np.where(y_pred >= 0.5, 1, 0)
 
-print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-print("Precision:", metrics.precision_score(y_test, y_pred))
-print("Recall:", metrics.recall_score(y_test, y_pred))
+print("Accuracy:", metrics.accuracy_score(y_test, y_pred_binary))
+print("Precision:", metrics.precision_score(y_test, y_pred_binary))
+print("Recall:", metrics.recall_score(y_test, y_pred_binary))
 
 print('Plotting...')
 graph.plot_confusion_matrix(y_pred=y_pred, y_actual=y_test, title='High (True) and Low (False) Expression Prediction', filename='images/confusion-matrix/CM-test.png')

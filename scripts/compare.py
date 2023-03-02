@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import helpers
 import graph
+from scipy.stats import spearmanr
 
 
 df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
@@ -11,13 +12,20 @@ mymethod_vals = helpers.norm(mymethod_vals)
 df['NLP_CUB'] = mymethod_vals
 df['Log Abundance'] = np.log(df['abundance'])
 
-df.rename(columns = {'NLP_CUB':'NLP CUB Measure', 'MM_avg':'%MinMax Average', 'abundance':'Abundance', 'log10phi':'Natural Log of Phi', 'disorder_ratio':'Disorder Ratio'}, inplace = True)
+print('Abundance vs NLP_CUB', spearmanr(df['abundance'], df['NLP_CUB']))
+print('Abundance vs %MinMaxAvg', spearmanr(df['abundance'], df['MM_avg']))
+print('Abundance vs log10phi', spearmanr(df['abundance'], df['log10phi']))
+print('Abundance vs CAI', spearmanr(df['abundance'], df['CAI']))
+print('Abundance vs CBI', spearmanr(df['abundance'], df['CBI']))
+print('Abundance vs Nc', spearmanr(df['abundance'], df['Nc']))
 
-graph.make_scatterplot_data(df, 'NLP CUB Measure', '%MinMax Average', 'Log Abundance', 'Our Method vs Average %MinMax by Abundance', 'images/scatterplots/NLP_MMavg_scatter-log.png')
-graph.make_scatterplot_data(df, 'NLP CUB Measure', 'Natural Log of Phi', 'Log Abundance', 'Our Method vs Log(Phi) by Abundance', 'images/scatterplots/NLP_logPhi_scatter-log.png')
-graph.make_scatterplot_data(df, 'NLP CUB Measure', 'CAI', 'Log Abundance', 'Our Method vs CAI by Abundance', 'images/scatterplots/NLP_CAI_scatter-log.png')
-graph.make_scatterplot_data(df, 'NLP CUB Measure', 'CBI', 'Log Abundance', 'Our Method vs CBI by Abundance', 'images/scatterplots/NLP_CBI_scatter-log.png')
-graph.make_scatterplot_data(df, 'NLP CUB Measure', 'Nc', 'Log Abundance', 'Our Method vs Nc by Abundance', 'images/scatterplots/NLP_Nc_scatter-log.png')
+#df.rename(columns = {'NLP_CUB':'NLP CUB Measure', 'MM_avg':'%MinMax Average', 'abundance':'Abundance', 'log10phi':'Natural Log of Phi', 'disorder_ratio':'Disorder Ratio'}, inplace = True)
+
+#graph.make_scatterplot_data(df, 'NLP CUB Measure', '%MinMax Average', 'Log Abundance', 'Our Method vs Average %MinMax by Abundance', 'images/scatterplots/NLP_MMavg_scatter-log.png')
+#graph.make_scatterplot_data(df, 'NLP CUB Measure', 'Natural Log of Phi', 'Log Abundance', 'Our Method vs Log(Phi) by Abundance', 'images/scatterplots/NLP_logPhi_scatter-log.png')
+#graph.make_scatterplot_data(df, 'NLP CUB Measure', 'CAI', 'Log Abundance', 'Our Method vs CAI by Abundance', 'images/scatterplots/NLP_CAI_scatter-log.png')
+#graph.make_scatterplot_data(df, 'NLP CUB Measure', 'CBI', 'Log Abundance', 'Our Method vs CBI by Abundance', 'images/scatterplots/NLP_CBI_scatter-log.png')
+#graph.make_scatterplot_data(df, 'NLP CUB Measure', 'Nc', 'Log Abundance', 'Our Method vs Nc by Abundance', 'images/scatterplots/NLP_Nc_scatter-log.png')
 
 #graph.make_scatterplot_data(df, 'NLP CUB Measure', 'Log Abundance', 'Disorder Ratio', 'Our Method vs Abundance', 'images/scatterplots/NLP_abundance_scatter.png')
 #graph.make_scatterplot_data(df, 'NLP CUB Measure', 'Log Abundance', '', 'Our Method vs Abundance', 'images/scatterplots/NLP_abundance_scatter-nodisorder.png')
