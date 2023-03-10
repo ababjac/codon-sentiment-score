@@ -94,7 +94,14 @@ for i in range(len(grid.optimizer_results_)):
 print('Print predicting with best params...')
 best_model = grid.best_estimator_
 y_pred = best_model.predict(X_test_seq)
+#test_loss, test_auc, test_acc, test_precision, test_recall = best_model.evaluate(test_images, test_labels)
 y_pred_cat = le.inverse_transform(y_pred.argmax(1))
+
+#print('Accuracy:', test_acc)
+#print('Precision:', test_precision)
+#print('Recall:', test_recall)
+#print('AUC:', test_auc)
+#print('Loss:', test_loss)
 
 out_array = np.array(y_pred_cat)
 out_array.tofile('results/testR3.csv', sep=',')
@@ -103,9 +110,3 @@ out_array.tofile('results/testR3.csv', sep=',')
 print('Plotting...')
 graph.plot_confusion_matrix(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-test.png')
 
-test_loss, test_auc, test_acc, test_precision, test_recall = best_model.evaluate(X_test_seq, y_test)
-print('Accuracy:', test_acc)
-print('Precision:', test_precision)
-print('Recall:', test_recall)
-print('AUC:', test_auc)
-print('Loss:', test_loss)
