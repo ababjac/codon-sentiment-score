@@ -5,23 +5,24 @@ import seaborn as sns
 
 def plot_confusion_matrix(y_pred, y_actual, title, filename):
     plt.gca().set_aspect('equal')
-    cf_matrix = metrics.confusion_matrix(y_actual, y_pred)
-    if len(cf_matrix) != 2: #if it predicts perfectly then confusion matrix returns incorrect form
-        val = cf_matrix[0][0]
-        tmp = [val, 0]
-        cf_matrix = np.array([tmp, [0, 0]])
+    #cf_matrix = metrics.confusion_matrix(y_actual, y_pred)
+    #if len(cf_matrix) != 2: #if it predicts perfectly then confusion matrix returns incorrect form
+    #    val = cf_matrix[0][0]
+    #    tmp = [val, 0]
+    #    cf_matrix = np.array([tmp, [0, 0]])
 
     #print(cf_matrix)
 
-    ax = sns.heatmap(cf_matrix, annot=True, cmap='Blues')
+    cf_matrix = multi_label_confusion_matrix(y_actual, y_pred)
+    ax = sns.heatmap(cf_matrix, annot=True, cmap='inferno')
 
     ax.set_title(title+'\n\n');
     ax.set_xlabel('\nPredicted Values')
     ax.set_ylabel('Actual Values\n');
 
     ## Ticket labels - List must be in alphabetical order
-    ax.xaxis.set_ticklabels(['False','True'])
-    ax.yaxis.set_ticklabels(['False','True'])
+    ax.xaxis.set_ticklabels(['High', 'Medium', 'Low'])
+    ax.yaxis.set_ticklabels(['High', 'Medium', 'Low'])
 
     ## Display the visualization of the Confusion Matrix.
     plt.tight_layout()

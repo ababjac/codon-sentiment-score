@@ -14,10 +14,10 @@ def create_model(lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size
     model.add(layers.Dense(neurons_dense, activation="relu"))
     model.add(layers.Dropout(dropout_rate))
 
-    model.add(layers.Dense(1, activation="sigmoid"))
+    model.add(layers.Dense(3, activation="softmax"))
 
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
-    model.compile(optimizer=optimizer, loss=tf.keras.losses.BinaryCrossentropy(), metrics=[tf.keras.metrics.AUC()])
+    model.compile(optimizer=optimizer, loss=tf.keras.losses.CategoricalCrossentropy(), metrics=[tf.keras.metrics.AUC(), tf.keras.metrics.CategoricalAccuracy(), tf.keras.metrics.Precision(), tf.keras.metrics.Recall()])
     return model
 
 ############ SIMPLE TESTING ###############
