@@ -13,7 +13,7 @@ def plot_confusion_matrix(y_pred, y_actual, title, filename):
 
     #print(cf_matrix)
 
-    cf_matrix = multi_label_confusion_matrix(y_actual, y_pred)
+    cf_matrix = metrics.confusion_matrix(y_actual, y_pred)
     ax = sns.heatmap(cf_matrix, annot=True, cmap='inferno')
 
     ax.set_title(title+'\n\n');

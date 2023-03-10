@@ -24,7 +24,7 @@ from skopt.callbacks import VerboseCallback
 from alibi.explainers import IntegratedGradients
 
 print('Reading data...')
-df = pd.read_csv('data/ecoli_complete.csv', index_col=0, nrows=100)
+df = pd.read_csv('data/ecoli_complete.csv', index_col=0, nrows=500)
 
 print('Processing data...')
 df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
@@ -35,16 +35,18 @@ df['sentiment'] = high_l+low_l
 
 MAX = max([len(elem) for elem in df['codons_cleaned']]) #get max sequence length for padding
 
-df_train, df_test = train_test_split(df, test_size=0.2) #save 20% for testing
+df_train, df_test = train_test_split(df, test_size=0.2, random_state=62835) #save 20% for testing
 
 X_train = df_train['codons_cleaned'].values
 y_train = df_train['sentiment'].values
-y_train_dummy = np_utils.to_categorical(LabelEncoder().fit_transform(y_train))
 
 X_test = df_test['codons_cleaned'].values
 y_test = df_test['sentiment'].values
-y_test_dummy = np_utils.to_categorical(LabelEncoder().fit_transform(y_test))
 
+le = LabelEncoder()
+le.fit(y_train)
+y_train_dummy = np_utils.to_categorical(le.transform(y_train))
+y_test_dummy = np_utils.to_categorical(le.transform(y_test))
 
 X_full = df['codons_cleaned'].values
 
@@ -62,48 +64,51 @@ X_full_seq = pad_sequences(X_full_seq, MAX)
 
 print('Building Model...')
 param_grid = {
-    #'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
-    #'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
-    #'lstm_units' : Integer(1, 10),
-    #'neurons_dense' : Integer(1, 300),
-    #'embedding_size' : Integer(2, 500)
-    'lstm_units' : Integer(1, 2),
+    'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
+    'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
+    'lstm_units' : Integer(1, 10),
+    'neurons_dense' : Integer(1, 300),
+    'embedding_size' : Integer(2, 500)
 }
 
-model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
+model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=1, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
 
 grid = BayesSearchCV(
     estimator=model,
     search_spaces=param_grid,
-    cv=KFold(n_splits=5, shuffle=True),
+    cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=94722).split(X_train, y_train),
     verbose=True,
     scoring='roc_auc',
+    n_jobs=8
 )
 
-result = grid.fit(X_train_seq, y_train_dummy)
-print('Best params: ', grid.best_params_)
-params = grid.best_params_
+#result = grid.fit(X_train_seq, y_train_dummy)
+#print('Best params: ', grid.best_params_)
+#params = grid.best_params_
 
-for i in range(len(grid.optimizer_results_)):
-    plot_optimizer(grid.optimizer_results_[i])
-    plt.savefig('images/grid/optimizer_results_{}.png'.format(i))
-    plt.close()
+#for i in range(len(grid.optimizer_results_)):
+#    plot_optimizer(grid.optimizer_results_[i])
+#    plt.savefig('images/grid/optimizer_results_{}.png'.format(i))
+#    plt.close()
 
 print('Print predicting with best params...')
-best_model = grid.best_estimator_
-y_pred = best_model.predict(X_test_seq)
-test_loss, test_auc, test_acc, test_precision, test_recall = best_model.evaluate(test_images,  test_labels)
+#best_model = grid.best_estimator_
+#y_pred = best_model.predict(X_test_seq)
+#test_loss, test_auc, test_acc, test_precision, test_recall = best_model.evaluate(test_images, test_labels)
+model.fit(X_train_seq, y_train_dummy)
+y_pred = model.predict(X_test_seq)
+y_pred_cat = le.inverse_transform(y_pred.argmax(1))
 
-print('Accuracy:', test_acc)
-print('Precision:', test_precision)
-print('Recall:', test_recall)
-print('AUC:', test_auc)
-print('Loss:', test_loss)
+#print('Accuracy:', test_acc)
+#print('Precision:', test_precision)
+#print('Recall:', test_recall)
+#print('AUC:', test_auc)
+#print('Loss:', test_loss)
 
 out_array = np.array(y_pred)
 out_array.tofile('results/testR3.csv', sep=',')
 #print()
 
 print('Plotting...')
-graph.plot_confusion_matrix(y_pred=y_pred, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-test.png')
+graph.plot_confusion_matrix(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-test.png')
 

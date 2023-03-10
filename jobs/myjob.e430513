@@ -1,0 +1,601 @@
+2023-03-10 10:45:44.224211: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 10:45:44.400702: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 10:45:44.408842: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 10:45:44.411899: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 10:45:45.600334: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 10:45:45.604639: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 10:45:45.608444: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 10:45:50.140494: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 10:45:50.144359: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 10:45:50.147760: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0737): /proc/driver/nvidia/version does not exist
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 10:45:51.559203: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+WARNING:tensorflow:5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7fab2c641040> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+WARNING:tensorflow:6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7fab25e3bb80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/skopt/optimizer/optimizer.py:449: UserWarning: The objective has been evaluated at this point before.
+  warnings.warn("The objective has been evaluated "
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/nfs/home/ababjac/codon-sentiment-score/scripts/train.py", line 88, in <module>
+    plot_optimizer(grid.optimizer_results_[i])
+NameError: name 'plot_optimizer' is not defined
