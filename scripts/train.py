@@ -71,7 +71,7 @@ param_grid = {
     'embedding_size' : Integer(2, 500)
 }
 
-model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=1, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
+model = KerasClassifier(build_fn=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
 
 grid = BayesSearchCV(
     estimator=model,
@@ -87,7 +87,7 @@ print('Best params: ', grid.best_params_)
 params = grid.best_params_
 
 for i in range(len(grid.optimizer_results_)):
-    plot_opjective(grid.optimizer_results_[i])
+    plot_objective(grid.optimizer_results_[i])
     plt.savefig('images/grid/optimizer_results_{}.png'.format(i))
     plt.close()
 

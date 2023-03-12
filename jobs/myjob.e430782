@@ -3,3 +3,926 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 2023-03-10 15:31:31.829621: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
 2023-03-10 15:31:31.928739: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
 2023-03-10 15:31:31.932967: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:31:34.245320: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:34.249279: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:34.252188: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:31:43.216304: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:43.219377: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:31:43.222922: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+/nfs/home/ababjac/codon-sentiment-score/scripts/helpers.py:53: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['codons_cleaned'] = get_codon_list(df[col])
+2023-03-10 15:31:47.243676: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:47.243824: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:47.247253: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:47.274798: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:47.290531: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:47.383271: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:31:47.383274: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:31:47.383274: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:31:47.390885: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:47.394937: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:31:47.392009: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:31:47.393540: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:47.395936: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:47.402639: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:31:47.403202: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:31:47.403331: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:47.414009: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:31:47.405155: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:31:47.414743: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:47.423967: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:31:48.286977: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.286985: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.287008: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.289417: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.291787: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.293900: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.297190: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.308223: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:31:48.299468: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:31:48.302124: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.305379: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:31:48.316710: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.316912: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:31:48.322232: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:48.327697: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:31:49.833855: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:49.833854: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:49.835513: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:49.838970: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:49.839735: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:31:49.842985: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:31:49.858839: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:31:49.846944: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:31:49.850753: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:31:49.853128: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:31:49.859045: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:31:49.864134: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:31:49.864490: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:49.866621: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:31:49.869544: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:49.872164: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:31:49.875294: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:49.881189: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:31:49.886721: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:31:49.904535: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:32:23.114961: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:32:23.115004: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:32:23.115222: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:32:23.256837: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:32:23.256835: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:32:23.266007: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:23.268708: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:32:23.266672: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:32:23.269425: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:23.278249: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:32:23.277006: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:23.283599: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:32:24.142060: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:24.142137: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:24.148924: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:24.154796: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:24.157324: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:32:24.157860: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:24.160123: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:32:24.169888: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:24.176182: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:32:25.705134: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:25.708667: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:32:25.725160: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:32:25.732085: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:32:25.794434: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:25.797163: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:32:25.799744: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:32:25.811211: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:32:25.817567: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:32:25.820512: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:32:25.826436: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:32:25.829733: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:38:37.523926: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:38:37.670466: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:38:37.677878: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:38:37.681058: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:38:38.555271: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:38:38.558036: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:38:38.561190: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:38:40.339855: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:38:40.342929: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:38:40.346154: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:38:40.349754: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:39:44.060068: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:39:44.060262: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:39:44.204241: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:39:44.205137: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:39:44.212133: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:44.214468: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:44.214822: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:39:44.217786: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:39:45.107354: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:45.110663: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:45.113406: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:39:45.117451: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:45.134745: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:45.149151: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:39:47.327302: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:47.332050: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:39:47.339509: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:39:47.343176: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:39:47.376817: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:39:47.385686: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:39:47.389104: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:39:47.399939: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:40:17.608858: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:40:17.608867: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:40:17.614826: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:40:17.752614: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:40:17.752610: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:40:17.752609: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:40:17.759213: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:17.761104: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:17.762147: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:40:17.763023: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:17.764459: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:40:17.769114: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:40:18.635534: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:18.640173: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:18.645432: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:40:18.679219: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:18.682371: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:18.685888: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:40:18.686739: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:18.690966: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:18.695913: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:40:20.273745: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:20.275821: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:40:20.278611: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:40:20.284670: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:40:20.615511: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:20.619713: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:40:20.623205: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:40:20.626787: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:40:20.951186: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:40:20.959691: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:40:20.970690: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:40:20.978973: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:41:20.105131: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:41:20.249920: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:41:20.261091: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:41:20.265988: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:41:21.138941: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:41:21.142931: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:41:21.146594: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:41:23.006910: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:41:23.010787: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:41:23.016450: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:41:23.019611: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:42:26.837715: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:42:26.992184: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:42:26.998838: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:42:27.003380: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:42:27.870144: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:42:27.873808: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:42:27.876490: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:42:30.224866: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:42:30.227489: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:42:30.232970: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:42:30.236319: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:44:09.840379: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:44:09.840793: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:44:09.985092: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:44:09.985468: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:44:09.993517: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:09.995774: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:09.996776: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:44:10.003678: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:44:10.892535: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:10.895178: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:10.896415: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:10.898145: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:44:10.900329: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:10.906399: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:44:12.670739: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:12.673158: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:44:12.677586: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:44:12.680871: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:44:12.704427: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:12.708823: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:44:12.711891: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:44:12.716236: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:44:44.215642: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:44:44.361396: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:44:44.367502: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:44.370822: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:44:45.211177: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:45.214188: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:45.217549: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:44:46.990810: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:44:46.993953: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:44:46.998130: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:44:47.001881: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:45:16.958576: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:45:17.112679: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:45:17.121056: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:17.124285: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:45:17.995322: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:17.998436: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:18.001276: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:45:19.816832: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:19.818968: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:45:19.822527: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:45:19.830764: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:45:44.706064: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:45:44.853148: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:45:44.862469: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:44.865340: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:45:45.705828: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:45.709213: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:45.712538: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:45:47.209973: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:45:47.212324: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:45:47.214845: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:45:47.217486: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:47:17.734372: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:47:17.879608: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:47:17.886658: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:17.889695: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:47:18.761800: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:18.765075: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:18.767825: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:47:20.821060: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:20.824694: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:47:20.828130: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:47:20.831838: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:47:53.347891: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:47:53.347917: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:47:53.491359: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:47:53.491357: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:47:53.497885: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:53.500194: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:47:53.501017: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:53.505741: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:47:54.363640: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:54.363736: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:54.367044: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:54.372287: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:47:54.369699: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:54.379015: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:47:55.999950: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:56.002259: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:47:56.005486: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:47:56.010611: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:47:56.028912: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:47:56.032446: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:47:56.035848: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:47:56.039675: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:48:57.698139: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:48:57.846249: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:48:57.853247: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:48:57.856271: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:48:58.727911: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:48:58.731337: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:48:58.733833: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:49:00.559171: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:49:00.561734: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:49:00.567955: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:49:00.571118: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:51:41.225604: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:51:41.225675: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:51:41.359212: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:51:41.359748: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:51:41.366987: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:41.370915: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:51:41.370979: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:41.378365: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:51:42.252369: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:42.254828: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:42.257429: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:51:42.258446: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:42.263779: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:42.267253: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:51:43.930453: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:43.932868: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:51:43.935681: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:51:43.939499: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:51:43.975568: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:51:43.978669: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:51:43.981541: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:51:43.983966: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:53:58.773831: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:53:58.773835: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:53:59.626157: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:53:59.626156: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:53:59.737506: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:53:59.737511: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:53:59.740366: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:53:59.743155: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:54:00.672262: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:54:00.675071: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:54:00.677407: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:54:00.678560: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:54:00.684712: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:54:00.688140: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:54:02.589002: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:54:02.591438: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:54:02.593922: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:54:02.596892: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:54:02.619102: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:54:02.623197: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:54:02.626194: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:54:02.631545: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:56:46.592434: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:56:46.592457: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-10 15:56:46.721891: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:56:46.721896: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-10 15:56:46.728522: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:46.730753: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:46.731905: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:56:46.735309: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-10 15:56:47.630633: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:47.630718: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:47.634090: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:47.636916: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:47.640185: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-10 15:56:47.644003: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:56:49.375189: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:49.378374: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:56:49.384462: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:56:49.390093: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:56:49.447272: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-10 15:56:49.451013: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-10 15:56:49.453379: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0707): /proc/driver/nvidia/version does not exist
+2023-03-10 15:56:49.456682: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+/lustre/isaac/scratch/ababjac/pyvenv/lib/python3.9/site-packages/scikeras/wrappers.py:301: UserWarning: ``build_fn`` will be renamed to ``model`` in a future release, at which point use of ``build_fn`` will raise an Error instead.
+  warnings.warn(
+2023-03-10 15:58:31.533284: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/nfs/home/ababjac/codon-sentiment-score/scripts/train.py", line 90, in <module>
+    plot_opjective(grid.optimizer_results_[i])
+NameError: name 'plot_opjective' is not defined
