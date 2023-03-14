@@ -59,11 +59,12 @@ param_grid = {
     'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
     'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
     'lstm_units' : Integer(1, 10),
-    'neurons_dense' : Integer(1, 300),
+    'neurons_dense1' : Integer(5, 300),
+    'neurons_dense2' : Integer(3, 150),
     'embedding_size' : Integer(2, 500)
 }
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
+model = KerasClassifier(model=sentiment_model.create_model, epochs=20, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
 
 grid = BayesSearchCV(
     estimator=model,
@@ -80,7 +81,7 @@ params = grid.best_params_
 
 for i in range(len(grid.optimizer_results_)):
     plot_objective(grid.optimizer_results_[i])
-    plt.savefig('images/grid/optimizer_results_binary_{}.png'.format(i))
+    plt.savefig('images/grid/optimizer_results_binary_{}.png'.format(i+1))
     plt.close()
 
 print('Print predicting with best params...')
@@ -88,10 +89,10 @@ best_model = grid.best_estimator_
 y_pred = best_model.predict(X_test_seq)
 
 out_array = np.array(y_pred)
-out_array.tofile('results/testR-binary.csv', sep=',')
+out_array.tofile('results/testR-binary_1.csv', sep=',')
 
 print('Plotting...')
-graph.plot_confusion_matrix_binary(y_pred=y_pred, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-binary.png')
+graph.plot_confusion_matrix_binary(y_pred=y_pred, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-binary_1.png')
 
 test_loss, test_auc, test_acc, test_precision, test_recall = best_model.model_.evaluate(X_test_seq, y_test)
 print('Binary Results:')

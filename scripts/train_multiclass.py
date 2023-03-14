@@ -68,11 +68,12 @@ param_grid = {
     'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
     'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
     'lstm_units' : Integer(1, 10),
-    'neurons_dense' : Integer(1, 300),
+    'neurons_dense1' : Integer(5, 300),
+    'neurons_dense2' : Integer(3, 150),
     'embedding_size' : Integer(2, 500)
 }
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
+model = KerasClassifier(model=sentiment_model.create_model, epochs=20, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
 
 grid = BayesSearchCV(
     estimator=model,
@@ -89,7 +90,7 @@ params = grid.best_params_
 
 for i in range(len(grid.optimizer_results_)):
     plot_objective(grid.optimizer_results_[i])
-    plt.savefig('images/grid/optimizer_results_multiclass_33-67_{}.png'.format(i))
+    plt.savefig('images/grid/optimizer_results_multiclass_33-67_{}.png'.format(i+1))
     plt.close()
 
 print('Print predicting with best params...')
@@ -98,11 +99,11 @@ y_pred = best_model.predict(X_test_seq)
 y_pred_cat = le.inverse_transform(y_pred.argmax(1))
 
 out_array = np.array(y_pred_cat)
-out_array.tofile('results/testR-multiclass_33-67.csv', sep=',')
+out_array.tofile('results/testR-multiclass_33-67_1.csv', sep=',')
 #print()
 
 print('Plotting...')
-graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-multiclass_33-67.png')
+graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-multiclass_33-67_1.png')
 
 test_loss, test_auc, test_acc, test_precision, test_recall = best_model.model_.evaluate(X_test_seq, y_test_dummy)
 print('33-67 Split Results:')
