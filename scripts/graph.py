@@ -3,15 +3,8 @@ from sklearn import metrics
 import numpy as np
 import seaborn as sns
 
-def plot_confusion_matrix(y_pred, y_actual, title, filename):
+def plot_confusion_matrix_multi(y_pred, y_actual, title, filename):
     plt.gca().set_aspect('equal')
-    #cf_matrix = metrics.confusion_matrix(y_actual, y_pred)
-    #if len(cf_matrix) != 2: #if it predicts perfectly then confusion matrix returns incorrect form
-    #    val = cf_matrix[0][0]
-    #    tmp = [val, 0]
-    #    cf_matrix = np.array([tmp, [0, 0]])
-
-    #print(cf_matrix)
 
     cf_matrix = metrics.confusion_matrix(y_actual, y_pred)
     ax = sns.heatmap(cf_matrix, annot=True, cmap='inferno')
@@ -23,6 +16,29 @@ def plot_confusion_matrix(y_pred, y_actual, title, filename):
     ## Ticket labels - List must be in alphabetical order
     ax.xaxis.set_ticklabels(['High', 'Medium', 'Low'])
     ax.yaxis.set_ticklabels(['High', 'Medium', 'Low'])
+
+    ## Display the visualization of the Confusion Matrix.
+    plt.tight_layout()
+    plt.savefig(filename)
+    plt.close()
+
+def plot_confusion_matrix_binary(y_pred, y_actual, title, filename):
+    plt.gca().set_aspect('equal')
+    cf_matrix = metrics.confusion_matrix(y_actual, y_pred)
+    if len(cf_matrix) != 2: #if it predicts perfectly then confusion matrix returns incorrect form
+        val = cf_matrix[0][0]
+        tmp = [val, 0]
+        cf_matrix = np.array([tmp, [0, 0]])
+
+    ax = sns.heatmap(cf_matrix, annot=True, cmap='inferno')
+
+    ax.set_title(title+'\n\n');
+    ax.set_xlabel('\nPredicted Values')
+    ax.set_ylabel('Actual Values\n');
+
+    ## Ticket labels - List must be in alphabetical order
+    ax.xaxis.set_ticklabels(['High', 'Low'])
+    ax.yaxis.set_ticklabels(['High', 'Low'])
 
     ## Display the visualization of the Confusion Matrix.
     plt.tight_layout()

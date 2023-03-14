@@ -1,0 +1,21 @@
+2023-03-11 20:19:33.546737: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-11 20:19:34.973531: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-11 20:19:35.316246: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-11 20:19:35.320176: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-03-11 20:19:37.946104: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-11 20:19:37.957764: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-11 20:19:37.962177: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-11 20:20:32.490110: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /spack/spack-0.17.1/apps/linux-rhel8-cascadelake/gcc-10.2.0/python-3.9.10-y63csltfuw5dhi5qffpdm4zmmfupfkqg/lib
+2023-03-11 20:20:32.494961: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-03-11 20:20:32.498449: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (clr0708): /proc/driver/nvidia/version does not exist
+/nfs/home/ababjac/codon-sentiment-score/scripts/helpers.py:53: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['codons_cleaned'] = get_codon_list(df[col])
+Traceback (most recent call last):
+  File "/nfs/home/ababjac/codon-sentiment-score/scripts/train_multiclass.py", line 74, in <module>
+    model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense=1, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=tf.keras.losses.CategoricalCrossentropy())
+NameError: name 'tf' is not defined
