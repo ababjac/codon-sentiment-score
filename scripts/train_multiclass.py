@@ -24,6 +24,8 @@ from skopt.callbacks import VerboseCallback
 
 from alibi.explainers import IntegratedGradients
 
+RUN = 2
+
 print('Reading data...')
 df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
 
@@ -66,14 +68,15 @@ X_full_seq = pad_sequences(X_full_seq, MAX)
 print('Building Model...')
 param_grid = {
     'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
-    'dropout_rate' : Real(0.1, 0.5, prior='log-uniform'),
-    'lstm_units' : Integer(1, 10),
-    'neurons_dense1' : Integer(5, 300),
-    'neurons_dense2' : Integer(3, 150),
-    'embedding_size' : Integer(2, 500)
+    'dropout_rate' : Real(0.05, 0.5, prior='log-uniform'),
+    'lstm_units1' : Integer(10, 20),
+    #'lstm_units2' : Integer(2, 10),
+    'neurons_dense1' : Integer(4, 64),
+    'neurons_dense2' : Integer(2, 32),
+    'embedding_size' : Integer(4, 32)
 }
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=20, verbose=1, validation_split=0.2, lstm_units=1, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
+model = KerasClassifier(model=sentiment_model.create_model, epochs=30, verbose=1, validation_split=0.2, lstm_units1=4, lstm_units2=3, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
 
 grid = BayesSearchCV(
     estimator=model,
@@ -90,7 +93,7 @@ params = grid.best_params_
 
 for i in range(len(grid.optimizer_results_)):
     plot_objective(grid.optimizer_results_[i])
-    plt.savefig('images/grid/optimizer_results_multiclass_33-67_{}.png'.format(i+1))
+    plt.savefig('images/grid/optimizer_results_multiclass_33-67_{}.png'.format(RUN))
     plt.close()
 
 print('Print predicting with best params...')
@@ -99,11 +102,11 @@ y_pred = best_model.predict(X_test_seq)
 y_pred_cat = le.inverse_transform(y_pred.argmax(1))
 
 out_array = np.array(y_pred_cat)
-out_array.tofile('results/testR-multiclass_33-67_1.csv', sep=',')
+out_array.tofile('results/testR-multiclass_33-67_{}.csv'.format(RUN), sep=',')
 #print()
 
 print('Plotting...')
-graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-multiclass_33-67_1.png')
+graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-multiclass_33-67_{}.png'.format(RUN))
 
 test_loss, test_auc, test_acc, test_precision, test_recall = best_model.model_.evaluate(X_test_seq, y_test_dummy)
 print('33-67 Split Results:')
@@ -112,3 +115,9 @@ print('Precision:', test_precision)
 print('Recall:', test_recall)
 print('AUC:', test_auc)
 print('Loss:', test_loss)
+
+#y_pred2 = y_pred.argmax(axis=1)
+#ig = IntegratedGradients(best_model.model_)
+#explanations = ig.explain(X_test_seq, target=y_pred2)
+
+#attrs = explanations.attributions
