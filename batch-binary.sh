@@ -4,7 +4,7 @@
 #SBATCH --qos=campus
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8 
-#SBATCH --time=12:00:00
+#SBATCH --time=24:00:00
 #SBATCH -e ./jobs/myjob.e%j
 #SBATCH -o ./jobs/myjob.o%j 
 #SBATCH --mail-type=ALL

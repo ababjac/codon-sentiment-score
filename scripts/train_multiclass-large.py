@@ -24,16 +24,16 @@ from skopt.callbacks import VerboseCallback
 
 from alibi.explainers import IntegratedGradients
 
-RUN = 2
+RUN = 3
 
 print('Reading data...')
-df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
+df = pd.read_csv('/lustre/isaac/proj/UTK0196/codon-expression-data/fullTableForTrainning/ecoli_fulltable.csv', index_col=0, nrows=2000)
 
 print('Processing data...')
-df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
-low, high = df.abundance.quantile([0.33, 0.67])
-high_l = np.where(df['abundance'] > high, 1, 0)
-low_l = np.where(df['abundance'] > low, 0, -1)
+df = helpers.add_codons_to_df(df, 'Sequence')
+low, high = df.median_exp.quantile([0.33, 0.67])
+high_l = np.where(df['median_exp'] > high, 1, 0)
+low_l = np.where(df['median_exp'] > low, 0, -1)
 df['sentiment'] = high_l+low_l
 
 MAX = max([len(elem) for elem in df['codons_cleaned']]) #get max sequence length for padding
@@ -66,38 +66,21 @@ X_test_seq = pad_sequences(X_test_seq, MAX)
 X_full_seq = pad_sequences(X_full_seq, MAX)
 
 print('Building Model...')
-#param_grid = {
-#    'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
-#    'dropout_rate' : Real(0.05, 0.5, prior='log-uniform'),
-#    'lstm_units1' : Integer(10, 20),
-#    #'lstm_units2' : Integer(2, 10),
-#    'neurons_dense1' : Integer(4, 64),
-#    'neurons_dense2' : Integer(2, 32),
-#    'embedding_size' : Integer(4, 32)
-#}
-
 param_grid = {
-    'learning_rate' : [0.0001, 0.001, 0.01, 0.1, 0.5],
-    'dropout_rate' : [0.1, 0.25],
-    'lstm_units1' : [8, 16, 32],
-    'neurons_dense1' : [4, 8, 16],
-    'embedding_size' : [8, 16, 32]
+    'learning_rate' : Real(0.0001, 0.5, prior='log-uniform'),
+    'dropout_rate' : Real(0.05, 0.5, prior='log-uniform'),
+    'lstm_units1' : Integer(10, 20),
+    #'lstm_units2' : Integer(2, 10),
+    'neurons_dense1' : Integer(4, 64),
+    'neurons_dense2' : Integer(2, 32),
+    'embedding_size' : Integer(4, 32)
 }
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units1=4, lstm_units2=3, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
+model = KerasClassifier(model=sentiment_model.create_model, epochs=30, verbose=1, validation_split=0.2, lstm_units1=4, lstm_units2=3, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
 
-#grid = BayesSearchCV(
-#    estimator=model,
-#    search_spaces=param_grid,
-#    cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=94722).split(X_train, y_train),
-#    verbose=True,
-#    scoring='roc_auc',
-#    n_jobs=8
-#)
-
-grid = GridSearchCV(
+grid = BayesSearchCV(
     estimator=model,
-    param_grid=param_grid,
+    search_spaces=param_grid,
     cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=94722).split(X_train, y_train),
     verbose=True,
     scoring='roc_auc',
@@ -108,14 +91,13 @@ result = grid.fit(X_train_seq, y_train_dummy)
 print('Best params: ', grid.best_params_)
 params = grid.best_params_
 
-#for i in range(len(grid.optimizer_results_)):
-#    plot_objective(grid.optimizer_results_[i])
-#    plt.savefig('images/grid/optimizer_results_multiclass_33-67_{}.png'.format(RUN))
-#    plt.close()
+for i in range(len(grid.optimizer_results_)):
+    plot_objective(grid.optimizer_results_[i])
+    plt.savefig('images/grid/optimizer_results_multiclass_33-67_{}.png'.format(RUN))
+    plt.close()
 
 print('Print predicting with best params...')
 best_model = grid.best_estimator_
-best_model.fit(X_train_seq, y_train_dummy, epochs=100)
 y_pred = best_model.predict(X_test_seq)
 y_pred_cat = le.inverse_transform(y_pred.argmax(1))
 
@@ -124,7 +106,7 @@ out_array.tofile('results/testR-multiclass_33-67_{}.csv'.format(RUN), sep=',')
 #print()
 
 print('Plotting...')
-graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Abundance Classification', filename='images/confusion-matrix/CM-multiclass_33-67_{}.png'.format(RUN))
+graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-multiclass_33-67_{}.png'.format(RUN))
 
 test_loss, test_auc, test_acc, test_precision, test_recall = best_model.model_.evaluate(X_test_seq, y_test_dummy)
 print('33-67 Split Results:')

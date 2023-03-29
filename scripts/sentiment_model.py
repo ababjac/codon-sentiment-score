@@ -19,8 +19,8 @@ def create_model(lstm_units1=4, lstm_units2=3, neurons_dense1=5, neurons_dense2=
     #model.add(layers.LSTM(units=lstm_units2, return_state=True, return_sequences=False))
     model.add(layers.Dense(neurons_dense1, activation="relu"))
     model.add(layers.Dropout(dropout_rate))
-    model.add(layers.Dense(neurons_dense2, activation="relu"))
-    model.add(layers.Dropout(dropout_rate))
+    #model.add(layers.Dense(neurons_dense2, activation="relu"))
+    #model.add(layers.Dropout(dropout_rate))
 
     model.add(layers.Dense(output_neurons, activation=output_activation))
 
