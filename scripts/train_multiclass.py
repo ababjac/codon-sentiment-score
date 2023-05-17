@@ -1,6 +1,7 @@
 import helpers
 import sentiment_model
 import graph
+import os
 
 import pandas as pd
 import numpy as np
@@ -24,17 +25,31 @@ from skopt.callbacks import VerboseCallback
 
 from alibi.explainers import IntegratedGradients
 
-RUN = 2
+PATH='/lustre/isaac/proj/UTK0196/codon-expression-data/fullTableForTrainning/'
+RUN = 3
 
 print('Reading data...')
-df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
+#df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
 
 print('Processing data...')
-df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
-low, high = df.abundance.quantile([0.33, 0.67])
-high_l = np.where(df['abundance'] > high, 1, 0)
-low_l = np.where(df['abundance'] > low, 0, -1)
+#df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
+#low, high = df.abundance.quantile([0.33, 0.67])
+#high_l = np.where(df['abundance'] > high, 1, 0)
+#low_l = np.where(df['abundance'] > low, 0, -1)
+#df['sentiment'] = high_l+low_l
+
+filelist = os.listdir(PATH)
+df_list = [pd.read_csv(PATH+file) for file in filelist]
+df = pd.concat(df_list)
+
+df = helpers.add_codons_to_df(df, 'Sequence')
+low, high = df.median_exp.quantile([0.33, 0.67])
+high_l = np.where(df['median_exp'] > high, 2, 0)
+low_l = np.where(df['median_exp'] > low, 0, 1)
 df['sentiment'] = high_l+low_l
+
+chosen_idx = np.random.choice(len(df), replace=False, size=1000)
+df = df.iloc[chosen_idx]
 
 MAX = max([len(elem) for elem in df['codons_cleaned']]) #get max sequence length for padding
 
@@ -124,7 +139,7 @@ out_array.tofile('results/testR-multiclass_33-67_{}.csv'.format(RUN), sep=',')
 #print()
 
 print('Plotting...')
-graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Abundance Classification', filename='images/confusion-matrix/CM-multiclass_33-67_{}.png'.format(RUN))
+graph.plot_confusion_matrix_multi(y_pred=y_pred_cat, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-multiclass_33-67_{}.png'.format(RUN))
 
 test_loss, test_auc, test_acc, test_precision, test_recall = best_model.model_.evaluate(X_test_seq, y_test_dummy)
 print('33-67 Split Results:')
@@ -133,6 +148,8 @@ print('Precision:', test_precision)
 print('Recall:', test_recall)
 print('AUC:', test_auc)
 print('Loss:', test_loss)
+
+print(grid.best_params_)
 
 #y_pred2 = y_pred.argmax(axis=1)
 #ig = IntegratedGradients(best_model.model_)

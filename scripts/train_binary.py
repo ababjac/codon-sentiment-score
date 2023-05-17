@@ -1,6 +1,7 @@
 import helpers
 import sentiment_model
 import graph
+import os
 
 import pandas as pd
 import numpy as np
@@ -24,14 +25,25 @@ from skopt.callbacks import VerboseCallback
 
 from alibi.explainers import IntegratedGradients
 
-RUN=3
+PATH='/lustre/isaac/proj/UTK0196/codon-expression-data/fullTableForTrainning/'
+RUN=4
 
 print('Reading data...')
-df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
+#df = pd.read_csv('data/ecoli_complete.csv', index_col=0)
 
 print('Processing data...')
-df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
-df['sentiment'] = np.where(df['abundance'] > np.median(df['abundance'].values), 1, 0)
+#df = helpers.add_codons_to_df(df, 'mRNA_cleaned')
+#df['sentiment'] = np.where(df['abundance'] > np.median(df['abundance'].values), 1, 0)
+
+filelist = os.listdir(PATH)
+df_list = [pd.read_csv(PATH+file) for file in filelist]
+df = pd.concat(df_list)
+
+df = helpers.add_codons_to_df(df, 'Sequence')
+df['sentiment'] = np.where(df['median_exp'] > np.median(df['median_exp'].values), 1, 0)
+
+#chosen_idx = np.random.choice(len(df), replace=False, size=1000)
+#df = df.iloc[chosen_idx]
 
 MAX = max([len(elem) for elem in df['codons_cleaned']]) #get max sequence length for padding
 
@@ -57,8 +69,6 @@ X_train_seq = pad_sequences(X_train_seq, MAX)
 X_test_seq = pad_sequences(X_test_seq, MAX)
 X_full_seq = pad_sequences(X_full_seq, MAX)
 
-print(X_full_seq)
-
 print('Building Model...')
 
 #param_grid = {
@@ -71,15 +81,15 @@ print('Building Model...')
 #    'embedding_size' : Integer(4, 32)
 #}
 
-param_grid = {
-    'learning_rate' : [0.0001, 0.001, 0.01, 0.1, 0.5],
-    'dropout_rate' : [0.1, 0.25],
-    'lstm_units1' : [8, 16, 32],
-    'neurons_dense1' : [4, 8, 16],
-    'embedding_size' : [8, 16, 32]
-}
+#param_grid = {
+#    'learning_rate' : [0.0001, 0.001, 0.01, 0.1, 0.5],
+#    'dropout_rate' : [0.1, 0.25],
+#    'lstm_units1' : [8, 16, 32],
+#    'neurons_dense1' : [4, 8, 16],
+#    'embedding_size' : [8, 16, 32]
+#}
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units1=4, lstm_units2=3, neurons_dense1=5, neurons_dense2=3, dropout_rate=0.1, embedding_size=2, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.5)
+model = KerasClassifier(model=sentiment_model.create_model, epochs=20, verbose=1, validation_split=0.2, lstm_units1=16, lstm_units2=3, neurons_dense1=8, neurons_dense2=3, dropout_rate=0.1, embedding_size=16, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.001)
 
 #grid = BayesSearchCV(
 #    estimator=model,
@@ -90,18 +100,18 @@ model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1
 #    n_jobs=8
 #)
 
-grid = GridSearchCV(
-    estimator=model,
-    param_grid=param_grid,
-    cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=94722).split(X_train, y_train),
-    verbose=True,
-    scoring='roc_auc',
-    n_jobs=-1
-)
+#grid = GridSearchCV(
+#    estimator=model,
+#    param_grid=param_grid,
+#    cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=94722).split(X_train, y_train),
+#    verbose=True,
+#    scoring='roc_auc',
+#    n_jobs=-1
+#)
 
-result = grid.fit(X_train_seq, y_train)
-print('Best params: ', grid.best_params_)
-params = grid.best_params_
+result = model.fit(X_train_seq, y_train)
+#print('Best params: ', grid.best_params_)
+#params = grid.best_params_
 
 #for i in range(len(grid.optimizer_results_)):
 #    plot_objective(grid.optimizer_results_[i])
@@ -109,17 +119,17 @@ params = grid.best_params_
 #    plt.close()
 
 print('Print predicting with best params...')
-best_model = grid.best_estimator_
-best_model.fit(X_train_seq, y_train, epochs=100)
-y_pred = best_model.predict(X_test_seq)
+#best_model = grid.best_estimator_
+#best_model.fit(X_train_seq, y_train, epochs=100)
+y_pred = model.predict(X_test_seq)
 
 out_array = np.array(y_pred)
 out_array.tofile('results/testR-binary_{}.csv'.format(RUN), sep=',')
 
 print('Plotting...')
-graph.plot_confusion_matrix_binary(y_pred=y_pred, y_actual=y_test, title='Abundance Classification', filename='images/confusion-matrix/CM-binary_{}.png'.format(RUN))
+graph.plot_confusion_matrix_binary(y_pred=y_pred, y_actual=y_test, title='Expression Classification', filename='images/confusion-matrix/CM-binary_{}.png'.format(RUN))
 
-test_loss, test_auc, test_acc, test_precision, test_recall = best_model.model_.evaluate(X_test_seq, y_test)
+test_loss, test_auc, test_acc, test_precision, test_recall = model.model_.evaluate(X_test_seq, y_test)
 print('Binary Results:')
 print('Accuracy:', test_acc)
 print('Precision:', test_precision)
@@ -127,6 +137,7 @@ print('Recall:', test_recall)
 print('AUC:', test_auc)
 print('Loss:', test_loss)
 
+#print(grid.best_params_)
 
 #testing integrated gradients
 #model.fit(X_train_seq, y_train)

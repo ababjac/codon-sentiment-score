@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A ACF-UTK0011
-#SBATCH --partition=campus
-#SBATCH --qos=campus
+#SBATCH --partition=campus-bigmem
+#SBATCH --qos=campus-bigmem
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8 
 #SBATCH --time=24:00:00
@@ -12,5 +12,5 @@
 
 cd $SLURM_SUBMIT_DIR
 source $SCRATCHDIR/pyvenv/bin/activate
-python scripts/train_multiclass.py
+python scripts/rf_multiclass.py
 

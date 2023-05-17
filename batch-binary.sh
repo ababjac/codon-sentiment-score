@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH -A ACF-UTK0011
-#SBATCH --partition=campus
-#SBATCH --qos=campus
+#SBATCH --partition=campus-gpu-bigmem
+#SBATCH --qos=campus-gpu
+#SBATCH --gpus=1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8 
 #SBATCH --time=24:00:00

@@ -1,0 +1,7 @@
+Accuracy: 0.5649999976158142
+Precision: 0.5339806079864502
+Recall: 0.585106372833252
+AUC: 0.5894219875335693
+Loss: 1.4104145765304565
+{'dropout_rate': 0.1, 'embedding_size': 16, 'learning_rate': 0.001, 'lstm_units1': 16, 'neurons_dense1': 8}
+~                           
