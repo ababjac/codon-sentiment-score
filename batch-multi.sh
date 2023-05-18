@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH -A ACF-UTK0011
-#SBATCH --partition=campus-bigmem
-#SBATCH --qos=campus-bigmem
+#SBATCH --partition=campus-gpu-bigmem
+#SBATCH --qos=campus-gpu
+#SBATCH --gpus=1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8 
 #SBATCH --time=24:00:00
@@ -12,5 +13,5 @@
 
 cd $SLURM_SUBMIT_DIR
 source $SCRATCHDIR/pyvenv/bin/activate
-python scripts/rf_multiclass.py
+python bert-scripts/codonBERTcustom2.py
 

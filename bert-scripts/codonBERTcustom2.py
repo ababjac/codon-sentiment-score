@@ -9,7 +9,7 @@ import os
 import gc
 import helpers
 
-from tensorflow.keras.metrics import CategoricalAccuracy
+from tensorflow.keras.metrics import SparseCategoricalAccuracy
 from tensorflow.nn import softmax
 from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer, AutoConfig
@@ -30,10 +30,10 @@ def compute_metrics(epred):
 
     metrics = {}
     #metrics['auprc'] = average_precision_score(labels, preds[:,1])
-    metrics['auroc'] = roc_auc_score(labels, probs[:,1], multi_class='ovr', average='micro')
-    metrics['accuracy'] = CategoricalAccuracy(labels, logits)
-    metrics['precision'] = precision_score(labels, preds[:, 1], average='micro')
-    metrics['recall'] = recall_score(labels, preds[:, 1], average='micro')
+    metrics['auroc'] = roc_auc_score(labels, probs, multi_class='ovr', average='micro')
+    metrics['accuracy'] = SparseCategoricalAccuracy()(labels, logits)
+    metrics['precision'] = precision_score(labels, preds, average='micro')
+    metrics['recall'] = recall_score(labels, preds, average='micro')
         
     return metrics
 

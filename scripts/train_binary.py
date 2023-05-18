@@ -89,7 +89,7 @@ print('Building Model...')
 #    'embedding_size' : [8, 16, 32]
 #}
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=20, verbose=1, validation_split=0.2, lstm_units1=16, lstm_units2=3, neurons_dense1=8, neurons_dense2=3, dropout_rate=0.1, embedding_size=16, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.001)
+model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units1=16, lstm_units2=3, neurons_dense1=8, neurons_dense2=3, dropout_rate=0.1, embedding_size=16, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.001)
 
 #grid = BayesSearchCV(
 #    estimator=model,
