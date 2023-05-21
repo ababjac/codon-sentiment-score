@@ -1,0 +1,19 @@
+Actual Multi:
+
+medium vs low - Ttest_indResult(statistic=0.43089212144765127, pvalue=0.7450980392156863)
+high vs medium - Ttest_indResult(statistic=15.903521127669688, pvalue=0.0196078431372549)
+high vs low - Ttest_indResult(statistic=15.372940907750937, pvalue=0.0196078431372549)
+
+Actual Binary:
+
+high vs low - Ttest_indResult(statistic=0.43089212144765127, pvalue=0.7450980392156863)
+
+Predicted Multi:
+
+medium vs low - Ttest_indResult(statistic=0.1898998274999093, pvalue=0.8627450980392157)
+high vs medium - Ttest_indResult(statistic=1.6285966458865822, pvalue=0.11764705882352941)
+high vs low - Ttest_indResult(statistic=1.3954671474867957, pvalue=0.11764705882352941)
+
+Predicted Binary:
+
+high vs low - Ttest_indResult(statistic=0.1898998274999093, pvalue=0.8627450980392157)

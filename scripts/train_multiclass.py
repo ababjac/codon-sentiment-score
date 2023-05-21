@@ -18,12 +18,12 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold, KFold
 
-from skopt import BayesSearchCV
-from skopt.space import Real, Categorical, Integer
-from skopt.plots import plot_objective, plot_histogram
-from skopt.callbacks import VerboseCallback
+#from skopt import BayesSearchCV
+#from skopt.space import Real, Categorical, Integer
+#from skopt.plots import plot_objective, plot_histogram
+#from skopt.callbacks import VerboseCallback
 
-from alibi.explainers import IntegratedGradients
+#from alibi.explainers import IntegratedGradients
 
 PATH='/lustre/isaac/proj/UTK0196/codon-expression-data/fullTableForTrainning/'
 RUN = 4
@@ -99,7 +99,7 @@ print('Building Model...')
 #    'embedding_size' : [8, 16, 32]
 #}
 
-model = KerasClassifier(model=sentiment_model.create_model, epochs=10, verbose=1, validation_split=0.2, lstm_units1=16, lstm_units2=3, neurons_dense1=8, neurons_dense2=3, dropout_rate=0.1, embedding_size=16, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.001, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
+model = KerasClassifier(model=sentiment_model.create_model, epochs=1, verbose=1, validation_split=0.2, lstm_units1=16, lstm_units2=3, neurons_dense1=8, neurons_dense2=3, dropout_rate=0.1, embedding_size=16, max_text_len=helpers.VOCAB_SIZE, learning_rate=0.001, output_neurons=3, output_activation='softmax', loss_function=CategoricalCrossentropy())
 
 #grid = BayesSearchCV(
 #    estimator=model,

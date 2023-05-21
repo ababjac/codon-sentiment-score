@@ -46,7 +46,7 @@ def get_codon_list(sequences):
     return np.array([get_codons(seq) for seq in sequences], dtype=object)
 
 def clean(df, col):
-    return df[df[col].map(lambda d: len(str(d)) > 9 and len(str(d)) % 3 == 0)]
+    return df[df[col].map(lambda d: len(str(d)) > 9 and len(str(d)) % 3 == 0 and set(str(d)) == set('ACGT'))]
 
 def add_codons_to_df(df, col):
     df = clean(df, col)
