@@ -121,15 +121,15 @@ print('Building Model...')
 #model = AutoModelForSequenceClassification.from_config(config) #randomly initialize it
 
 ## Creating the model from the desired transformer model
-model = BertRegresser.from_pretrained('./models/codonBERT-binary_1/checkpoint-99500', config=config)
+model = BertRegresser.from_pretrained('./models/codonBERT-binary_reg/checkpoint-99500', config=config)
 #optimizer = torch.optim.Adam(params=model.parameters())
 
 training_args = TrainingArguments(
-    output_dir='./models/codonBERT-binary_reg'.format(RUN),
+    output_dir='./models/codonBERT-binary_reg_1'.format(RUN),
     learning_rate=2e-6,
     per_device_train_batch_size=4,
     per_device_eval_batch_size=4,
-    num_train_epochs=10,
+    num_train_epochs=1,
     weight_decay=0.01,
 )
 
@@ -148,6 +148,6 @@ trainer.evaluate()
 out = trainer.predict(test_dataset=tokenized_ds_test)
 
 scores = compute_metrics(out)
-with open('./results/codonBERT-binary_reg.txt'.format(RUN),'w') as data: 
+with open('./results/codonBERT-binary_reg_1.txt'.format(RUN),'w') as data: 
       data.write(str(scores))
 

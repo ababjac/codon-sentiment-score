@@ -1,0 +1,6 @@
+33-67 Split Results:
+Accuracy: 0.37458476424217224
+Precision: 0.0
+Recall: 0.0
+AUC: 0.5560413599014282
+Loss: 1.0913442373275757

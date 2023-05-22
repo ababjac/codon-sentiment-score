@@ -12,6 +12,6 @@
 #SBATCH --mail-user=ababjac@vols.utk.edu
 
 cd $SLURM_SUBMIT_DIR
-source $SCRATCHDIR/pytvenv/bin/activate
-#python bert-scripts/codonBERTregression2.py
-python scripts/train_multiclass.py
+source $SCRATCHDIR/pyvenv/bin/activate
+python bert-scripts/codonBERTregression2.py
+#python scripts/train_multiclass.py
