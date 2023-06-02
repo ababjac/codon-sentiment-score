@@ -1,0 +1,46 @@
+Predicted Binary:
+
+Drosophila
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+ecoli
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+celegan
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+atha
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+yeasts288c
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+Saccharomyces
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+Musmusculus
+Ttest_indResult(statistic=0.8606411450697552, pvalue=0.49019607843137253)
+
+
+Actual Binary:
+
+Drosophila
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
+
+ecoli
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
+
+celegan
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
+
+atha
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
+
+yeasts288c
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
+
+Saccharomyces
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
+
+Musmusculus
+Ttest_indResult(statistic=-1.3056911419833501, pvalue=0.19607843137254902)
