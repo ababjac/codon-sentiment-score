@@ -75,7 +75,7 @@ del df_val
 del df_test
 
 print('Tokenizing...')
-config = AutoConfig.from_pretrained('distilbert-base-uncased', max_position_embeddings=trunc_len, num_labels=3)
+config = AutoConfig.from_pretrained('bert-base-uncased', max_position_embeddings=trunc_len, num_labels=3)
 tokenizer = AutoTokenizer.from_pretrained('./tokenizers/codonBERT', model_max_length=trunc_len, padding_side='left', truncation_side='right')
 
 tokenized_ds_train = ds_train.map(lambda d : tokenizer(d['text'], truncation=True, padding=True), batched=True)
@@ -90,16 +90,17 @@ gc.collect()
 torch.cuda.empty_cache()
 
 print('Building Model...')
-model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT-multi_0/checkpoint-527500', num_labels=3)
-#model = AutoModelForSequenceClassification.from_config(config) #randomly initialize it
+#model = AutoModelForSequenceClassification.from_pretrained('', num_labels=3)
+model = AutoModelForSequenceClassification.from_config(config) #randomly initialize it
 
 training_args = TrainingArguments(
-    output_dir='./models/codonBERT-multi_{}'.format(RUN),
+    output_dir='./models/codonBERT-multi-large_{}'.format(RUN),
     learning_rate=2e-6,
     per_device_train_batch_size=4,
     per_device_eval_batch_size=4,
     num_train_epochs=10,
     weight_decay=0.01,
+    save_strategy="epoch",
 )
 
 trainer = Trainer(
@@ -117,6 +118,6 @@ trainer.evaluate()
 out = trainer.predict(test_dataset=tokenized_ds_test)
 
 scores = compute_metrics(out)
-with open('./results/codonBERT-multi_{}.txt'.format(RUN),'w') as data: 
+with open('./results/codonBERT-multi-large_{}.txt'.format(RUN),'w') as data: 
       data.write(str(scores))
 

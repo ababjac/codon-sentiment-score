@@ -13,5 +13,5 @@
 
 cd $SLURM_SUBMIT_DIR
 source $SCRATCHDIR/pyvenv/bin/activate
-python bert-scripts/codonBERTregression2.py
+python bert-scripts/codonBERTcustom2.py
 #python scripts/train_multiclass.py

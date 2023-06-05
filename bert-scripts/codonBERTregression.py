@@ -97,12 +97,12 @@ for file, _df in zip(filelist, df_list):
     
 df['species'] = s
 
-SPECIES = 'atha'
+SPECIES = 'ecoli'
 
 df = df[df['species'] == SPECIES] #train on only yeast sequences
 
 df = helpers.add_codons_to_df(df, 'Sequence')
-labels = df['median_exp']
+labels = np.log(df['median_exp'])
 
 #labels = labels.type(torch.LongTensor)
 
@@ -153,7 +153,7 @@ model = AutoModelForSequenceClassification.from_pretrained('bert-base-uncased', 
 #optimizer = torch.optim.Adam(params=model.parameters())
 
 training_args = TrainingArguments(
-    output_dir='./models/codonBERT_reg_{}-nopre'.format(SPECIES),
+    output_dir='./models/codonBERT_reg_{}-nopre-norm'.format(SPECIES),
     learning_rate=1e-5,
     per_device_train_batch_size=32,
     per_device_eval_batch_size=32,
@@ -186,10 +186,10 @@ trainer.evaluate()
 out = trainer.predict(test_dataset=tokenized_ds_test)
 
 scores = compute_metrics(out)
-with open('./results/codonBERT_reg_scores_{}-nopre.txt'.format(SPECIES),'w') as data: 
+with open('./results/codonBERT_reg_scores_{}-nopre-norm.txt'.format(SPECIES),'w') as data: 
     data.write(str(scores))
 
-with open('./results/codonBERT_reg_output_{}-nopre.txt'.format(SPECIES),'w') as data:
+with open('./results/codonBERT_reg_output_{}-nopre-norm.txt'.format(SPECIES),'w') as data:
     for val in out[0]:
         data.write(str(val)+'\n')
 

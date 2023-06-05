@@ -15,7 +15,7 @@ from sklearn.metrics import roc_auc_score, average_precision_score, precision_sc
 from sklearn.model_selection import train_test_split
 
 PATH='/lustre/isaac/proj/UTK0196/codon-expression-data/fullTableForTrainning/'
-RUN=1
+RUN=2
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"
 
 def compute_metrics(epred):
@@ -28,7 +28,7 @@ def compute_metrics(epred):
     metrics = {}
     #metrics['auprc'] = average_precision_score(labels, preds[:,1])
     metrics['auroc'] = roc_auc_score(labels, probs[:,1])
-    metrics['accuracy'] = accuracy_score(labels, logits)
+    metrics['accuracy'] = accuracy_score(labels, preds)
     metrics['precision'] = precision_score(labels, preds)
     metrics['recall'] = recall_score(labels, preds)
 
@@ -67,7 +67,7 @@ del df_test
 del df_val
 
 print('Tokenizing...')
-config = AutoConfig.from_pretrained('distilbert-base-uncased', max_position_embeddings=trunc_len)
+config = AutoConfig.from_pretrained('bert-base-uncased', max_position_embeddings=trunc_len)
 tokenizer = AutoTokenizer.from_pretrained('./tokenizers/codonBERT', model_max_length=trunc_len, padding_side='left', truncation_side='right')
 
 
@@ -82,16 +82,17 @@ gc.collect()
 torch.cuda.empty_cache()
 
 print('Building Model...')
-model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT-binary_0/checkpoint-527500', num_labels=2)
+model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT-binary-large_1/checkpoint-127330', num_labels=2)
 #model = AutoModelForSequenceClassification.from_config(config) #randomly initialize it
 
 training_args = TrainingArguments(
-    output_dir='./models/codonBERT-binary_{}'.format(RUN),
+    output_dir='./models/codonBERT-binary-large_{}'.format(RUN),
     learning_rate=2e-6,
     per_device_train_batch_size=4,
     per_device_eval_batch_size=4,
-    num_train_epochs=10,
+    num_train_epochs=1,
     weight_decay=0.01,
+    save_strategy="epoch",
 )
 
 trainer = Trainer(
@@ -109,6 +110,6 @@ trainer.evaluate()
 out = trainer.predict(test_dataset=tokenized_ds_test)
 
 scores = compute_metrics(out)
-with open('./results/codonBERT-binary_{}.txt'.format(RUN),'w') as data: 
+with open('./results/codonBERT-binary-large_{}.txt'.format(RUN),'w') as data: 
       data.write(str(scores))
 
