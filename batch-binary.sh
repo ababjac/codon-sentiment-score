@@ -5,7 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --gpus=1
 #SBATCH --ntasks-per-node=8 
-#SBATCH --time=6:00:00
+#SBATCH --time=12:00:00
 #SBATCH -e ./jobs/myjob.e%j
 #SBATCH -o ./jobs/myjob.o%j 
 #SBATCH --mail-type=ALL

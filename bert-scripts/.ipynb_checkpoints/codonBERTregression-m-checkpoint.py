@@ -308,7 +308,7 @@ for file, _df in zip(filelist, df_list):
     
 df['species'] = s
 
-SPECIES = 'yeasts288c'
+SPECIES = 'ecoli'
 
 df = df[df['species'] == SPECIES] #train on only yeast sequences
 
