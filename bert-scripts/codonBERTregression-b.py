@@ -92,7 +92,7 @@ def setLayers(t, s, parts):
 
     for part in parts:
         target[part].data.copy_(source[part].data)  
-        target[part].requires_grad = False
+        #target[part].requires_grad = False
 
 parts = [
         'bert.embeddings.word_embeddings.weight',
@@ -309,7 +309,7 @@ for file, _df in zip(filelist, df_list):
     
 df['species'] = s
 
-SPECIES = 'yeasts288c'
+SPECIES = 'ecoli'
 
 df = df[df['species'] == SPECIES] #train on only yeast sequences
 
@@ -373,12 +373,12 @@ setLayers(model, pretrained_model, parts) #setting weights from pretrained binar
 #optimizer = torch.optim.Adam(params=model.parameters())
 
 training_args = TrainingArguments(
-    output_dir='./models/codonBERT_binary_reg_{}-pre-frozen-norm2'.format(SPECIES),
-    learning_rate=1e-6,
-    per_device_train_batch_size=32,
-    per_device_eval_batch_size=32,
-    num_train_epochs=200,
-    weight_decay=0.001,
+    output_dir='./models/codonBERT_binary_reg_{}-pre-norm2'.format(SPECIES),
+    learning_rate=1e-5,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
+    num_train_epochs=50,
+    weight_decay=0.01,
     optim="adamw_torch",
     evaluation_strategy="epoch",
     save_strategy="epoch",
@@ -408,10 +408,10 @@ logits, labels, metrics = out
 #print(logits.shape, labels.shape)
 #scores = compute_metrics(out)
 
-with open('./results/codonBERT_binary_reg_scores_{}-pre-frozen-norm2.txt'.format(SPECIES),'w') as data: 
+with open('./results/codonBERT_binary_reg_scores_{}-pre-norm2.txt'.format(SPECIES),'w') as data: 
     data.write(str(metrics))
 
-with open('./results/codonBERT_binary_reg_output_{}-pre-frozen-norm2.txt'.format(SPECIES),'w') as data:
+with open('./results/codonBERT_binary_reg_output_{}-pre-norm2.txt'.format(SPECIES),'w') as data:
     for val in logits:
         data.write(str(val)+'\n')
 
