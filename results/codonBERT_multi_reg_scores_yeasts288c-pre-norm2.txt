@@ -1,0 +1,1 @@
+{'test_loss': 0.00011794280726462603, 'test_mse': 0.00011790412827394903, 'test_mae': 0.009886015206575394, 'test_r2': -4.288306605433151, 'test_spearmanr': 0.6240982719668843, 'test_runtime': 22.5655, 'test_samples_per_second': 44.67, 'test_steps_per_second': 5.584}
