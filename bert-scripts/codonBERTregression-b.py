@@ -309,7 +309,7 @@ for file, _df in zip(filelist, df_list):
     
 df['species'] = s
 
-SPECIES = 'Musmusculus'
+SPECIES = 'atha'
 
 df = df[df['species'] == SPECIES] #train on only yeast sequences
 
@@ -357,10 +357,11 @@ gc.collect()
 torch.cuda.empty_cache()
 
 print('Building Model...')
-pretrained_model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT-binary-large_1/checkpoint-127330')
-model = AutoModelForSequenceClassification.from_config(config)
+#pretrained_model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT-binary-large_1/checkpoint-127330')
+#model = AutoModelForSequenceClassification.from_config(config)
 
-setLayers(model, pretrained_model, parts) #setting weights from pretrained binary classifier except for last layers
+model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT_binary_reg_atha-pre-norm2/checkpoint-29400/')
+#setLayers(model, pretrained_model, parts) #setting weights from pretrained binary classifier except for last layers
 
 #for name, param in pretrained_model.named_parameters():
 #    print(name, param.requires_grad)
@@ -373,7 +374,7 @@ setLayers(model, pretrained_model, parts) #setting weights from pretrained binar
 #optimizer = torch.optim.Adam(params=model.parameters())
 
 training_args = TrainingArguments(
-    output_dir='./models/codonBERT_binary_reg_{}-pre-norm2'.format(SPECIES),
+    output_dir='./models/codonBERT_binary_reg_{}-pre-norm2-1'.format(SPECIES),
     learning_rate=1e-5,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
@@ -398,8 +399,8 @@ trainer = CustomTrainer(
 
 
 #print('Training...')
-trainer.train()
-trainer.evaluate()
+#trainer.train()
+#trainer.evaluate()
 out = trainer.predict(test_dataset=tokenized_ds_test)
 logits, labels, metrics = out
 
