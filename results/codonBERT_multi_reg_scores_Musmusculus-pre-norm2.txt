@@ -1,1 +1,1 @@
-{'test_loss': 4.7599660319974646e-05, 'test_mse': 4.7595429350622e-05, 'test_mae': 0.005856443662196398, 'test_r2': -0.0022224884590642535, 'test_spearmanr': 0.15900906596104472, 'test_runtime': 76.6397, 'test_samples_per_second': 44.703, 'test_steps_per_second': 5.598}
+{'test_loss': 4.793681364390068e-05, 'test_mse': 4.79334921692498e-05, 'test_mae': 0.00577414408326149, 'test_r2': -0.00934102775244594, 'test_spearmanr': 0.2513920303039487, 'test_runtime': 76.81, 'test_samples_per_second': 44.604, 'test_steps_per_second': 5.585}
