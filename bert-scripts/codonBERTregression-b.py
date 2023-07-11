@@ -309,7 +309,7 @@ for file, _df in zip(filelist, df_list):
     
 df['species'] = s
 
-SPECIES = 'atha'
+SPECIES = 'Musmusculus'
 
 df = df[df['species'] == SPECIES] #train on only yeast sequences
 
@@ -360,7 +360,7 @@ print('Building Model...')
 #pretrained_model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT-binary-large_1/checkpoint-127330')
 #model = AutoModelForSequenceClassification.from_config(config)
 
-model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT_binary_reg_atha-pre-norm2/checkpoint-29400/')
+model = AutoModelForSequenceClassification.from_pretrained('./models/codonBERT_binary_reg_Musmusculus-pre-norm2/checkpoint-63222/')
 #setLayers(model, pretrained_model, parts) #setting weights from pretrained binary classifier except for last layers
 
 #for name, param in pretrained_model.named_parameters():
@@ -416,3 +416,6 @@ with open('./results/codonBERT_binary_reg_output_{}-pre-norm2.txt'.format(SPECIE
     for val in logits:
         data.write(str(val)+'\n')
 
+with open('./results/codonBERT_binary_reg_labels_{}-pre-norm2.txt'.format(SPECIES),'w') as data:
+    for val in labels:
+        data.write(str(val)+'\n')
