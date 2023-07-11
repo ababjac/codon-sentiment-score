@@ -1,0 +1,1 @@
+{'auroc': 0.5086432165290248, 'accuracy': <tf.Tensor: shape=(), dtype=float32, numpy=0.33665535>, 'precision': 0.3366553576477241, 'recall': 0.3366553576477241}
